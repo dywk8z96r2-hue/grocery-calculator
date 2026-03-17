@@ -13,7 +13,7 @@
 <style>
   :root {
     --bg: #0f0f0d;
-    --surface: #0a43bf;
+    --surface: #1a1a18;
     --surface2: #242420;
     --border: #2e2e2a;
     --accent: #c8f04e;
@@ -26,9 +26,9 @@
     --safe-top: env(safe-area-inset-top);
     --safe-bottom: env(safe-area-inset-bottom);
   }
-
+ 
   * { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
-
+ 
   html, body {
     height: 100%;
     background: var(--bg);
@@ -37,7 +37,7 @@
     overscroll-behavior: none;
     -webkit-font-smoothing: antialiased;
   }
-
+ 
   body {
     display: flex;
     flex-direction: column;
@@ -45,7 +45,7 @@
     padding-top: var(--safe-top);
     padding-bottom: var(--safe-bottom);
   }
-
+ 
   /* HEADER */
   .header {
     padding: 18px 20px 14px;
@@ -56,21 +56,21 @@
     flex-shrink: 0;
     background: var(--bg);
   }
-
+ 
   .header-title {
     font-family: 'Syne Mono', monospace;
     font-size: 18px;
     color: var(--accent);
     letter-spacing: -0.5px;
   }
-
+ 
   .item-count {
     font-size: 12px;
     color: var(--text-muted);
     font-weight: 400;
     letter-spacing: 0.05em;
   }
-
+ 
   .clear-btn {
     background: none;
     border: 1px solid var(--border);
@@ -84,7 +84,7 @@
     transition: all 0.15s;
   }
   .clear-btn:active { background: var(--surface2); color: var(--red); border-color: var(--red); }
-
+ 
   /* INPUT ZONE */
   .input-zone {
     padding: 16px 20px;
@@ -92,21 +92,21 @@
     border-bottom: 1px solid var(--border);
     flex-shrink: 0;
   }
-
+ 
   .price-row {
     display: flex;
     gap: 10px;
     align-items: center;
     margin-bottom: 12px;
   }
-
+ 
   .price-wrap {
     flex: 1;
     position: relative;
     display: flex;
     align-items: center;
   }
-
+ 
   .dollar-sign {
     position: absolute;
     left: 14px;
@@ -116,7 +116,7 @@
     pointer-events: none;
     font-weight: 400;
   }
-
+ 
   .price-input {
     width: 100%;
     background: var(--bg);
@@ -133,7 +133,7 @@
   }
   .price-input:focus { border-color: var(--accent); }
   .price-input::placeholder { color: var(--text-faint); }
-
+ 
   .add-btn {
     background: var(--accent);
     border: none;
@@ -150,7 +150,7 @@
   }
   .add-btn:active { transform: scale(0.93); background: var(--accent-dim); }
   .add-btn svg { color: #0f0f0d; }
-
+ 
   .label-input {
     width: 100%;
     background: var(--bg);
@@ -166,7 +166,7 @@
   }
   .label-input:focus { border-color: var(--border); }
   .label-input::placeholder { color: var(--text-faint); }
-
+ 
   /* RECEIPT / ITEM LIST */
   .receipt-wrap {
     flex: 1;
@@ -174,14 +174,14 @@
     -webkit-overflow-scrolling: touch;
     background: var(--receipt-bg);
   }
-
+ 
   .receipt-header {
     display: flex;
     justify-content: space-between;
     padding: 10px 20px 6px;
     border-bottom: 1px dashed var(--border);
   }
-
+ 
   .receipt-col-label {
     font-family: 'Syne Mono', monospace;
     font-size: 10px;
@@ -189,11 +189,11 @@
     letter-spacing: 0.12em;
     text-transform: uppercase;
   }
-
+ 
   .item-list {
     padding: 4px 0;
   }
-
+ 
   .item-row {
     display: flex;
     align-items: center;
@@ -204,12 +204,12 @@
     transition: background 0.15s;
   }
   .item-row:active { background: var(--surface2); }
-
+ 
   @keyframes slideIn {
     from { opacity: 0; transform: translateX(-12px); }
     to { opacity: 1; transform: translateX(0); }
   }
-
+ 
   .item-num {
     font-family: 'Syne Mono', monospace;
     font-size: 10px;
@@ -217,7 +217,7 @@
     width: 18px;
     flex-shrink: 0;
   }
-
+ 
   .item-label {
     flex: 1;
     font-size: 14px;
@@ -227,14 +227,14 @@
     overflow: hidden;
     text-overflow: ellipsis;
   }
-
+ 
   .item-price {
     font-family: 'Syne Mono', monospace;
     font-size: 15px;
     color: var(--text);
     flex-shrink: 0;
   }
-
+ 
   .remove-btn {
     background: none;
     border: none;
@@ -247,7 +247,7 @@
     align-items: center;
   }
   .remove-btn:active { color: var(--red); }
-
+ 
   .empty-state {
     display: flex;
     flex-direction: column;
@@ -258,7 +258,7 @@
   }
   .empty-icon { font-size: 40px; opacity: 0.25; }
   .empty-text { font-size: 13px; color: var(--text-faint); letter-spacing: 0.04em; }
-
+ 
   /* TOTALS PANEL */
   .totals-panel {
     background: var(--surface);
@@ -266,35 +266,35 @@
     padding: 16px 20px;
     flex-shrink: 0;
   }
-
+ 
   .totals-row {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 5px 0;
   }
-
+ 
   .totals-label {
     font-size: 13px;
     color: var(--text-muted);
     font-weight: 400;
   }
-
+ 
   .totals-value {
     font-family: 'Syne Mono', monospace;
     font-size: 14px;
     color: var(--text);
   }
-
+ 
   .totals-row.fee .totals-label { color: var(--accent-dim); }
   .totals-row.fee .totals-value { color: var(--accent-dim); }
-
+ 
   .divider {
     height: 1px;
     background: var(--border);
     margin: 10px 0;
   }
-
+ 
   .tax-row {
     display: flex;
     align-items: center;
@@ -302,19 +302,19 @@
     padding: 5px 0;
     gap: 12px;
   }
-
+ 
   .tax-label {
     font-size: 13px;
     color: var(--text-muted);
     white-space: nowrap;
   }
-
+ 
   .tax-input-wrap {
     display: flex;
     align-items: center;
     gap: 4px;
   }
-
+ 
   .tax-input {
     background: var(--bg);
     border: 1px solid var(--border);
@@ -330,10 +330,10 @@
     transition: border-color 0.2s;
   }
   .tax-input:focus { border-color: var(--accent); }
-
+ 
   .tax-pct { font-family: 'Syne Mono', monospace; font-size: 13px; color: var(--text-muted); }
   .tax-amount { font-family: 'Syne Mono', monospace; font-size: 14px; color: var(--text); }
-
+ 
   .grand-total-row {
     display: flex;
     justify-content: space-between;
@@ -343,7 +343,7 @@
     background: var(--accent);
     border-radius: 12px;
   }
-
+ 
   .grand-label {
     font-size: 12px;
     font-weight: 600;
@@ -351,7 +351,7 @@
     letter-spacing: 0.1em;
     text-transform: uppercase;
   }
-
+ 
   .grand-value {
     font-family: 'Syne Mono', monospace;
     font-size: 26px;
@@ -361,13 +361,13 @@
 </style>
 </head>
 <body>
-
+ 
 <div class="header">
   <span class="header-title">CART CALC</span>
   <span class="item-count" id="itemCount">0 items</span>
   <button class="clear-btn" onclick="clearAll()">CLEAR</button>
 </div>
-
+ 
 <div class="input-zone">
   <div class="price-row">
     <div class="price-wrap">
@@ -401,7 +401,7 @@
     enterkeyhint="done"
   >
 </div>
-
+ 
 <div class="receipt-wrap">
   <div class="receipt-header">
     <span class="receipt-col-label">#&nbsp;&nbsp;ITEM</span>
@@ -414,7 +414,7 @@
     </div>
   </div>
 </div>
-
+ 
 <div class="totals-panel">
   <div class="totals-row">
     <span class="totals-label">Subtotal</span>
@@ -440,26 +440,26 @@
     <span class="grand-value" id="grandTotal">$0.00</span>
   </div>
 </div>
-
+ 
 <script>
   let items = JSON.parse(localStorage.getItem('cartItems') || '[]');
   let taxRate = parseFloat(localStorage.getItem('taxRate') || '8.25');
-
+ 
   const priceInput = document.getElementById('priceInput');
   const labelInput = document.getElementById('labelInput');
   const taxRateInput = document.getElementById('taxRate');
-
+ 
   taxRateInput.value = taxRate;
-
+ 
   function fmt(n) {
     return '$' + n.toFixed(2);
   }
-
+ 
   function save() {
     localStorage.setItem('cartItems', JSON.stringify(items));
     localStorage.setItem('taxRate', taxRate);
   }
-
+ 
   function addItem() {
     const price = parseFloat(priceInput.value);
     if (isNaN(price) || price <= 0) {
@@ -477,13 +477,13 @@
     save();
     render();
   }
-
+ 
   function removeItem(id) {
     items = items.filter(i => i.id !== id);
     save();
     render();
   }
-
+ 
   function clearAll() {
     if (items.length === 0) return;
     if (confirm('Clear all items?')) {
@@ -492,22 +492,22 @@
       render();
     }
   }
-
+ 
   function render() {
     const list = document.getElementById('itemList');
     const empty = document.getElementById('emptyState');
-
+ 
     // Count
     document.getElementById('itemCount').textContent =
       items.length === 0 ? '0 items' : `${items.length} item${items.length !== 1 ? 's' : ''}`;
-
+ 
     if (items.length === 0) {
       list.innerHTML = '';
       list.appendChild(empty);
       calcTotals(0, true);
       return;
     }
-
+ 
     list.innerHTML = '';
     items.forEach((item, idx) => {
       const row = document.createElement('div');
@@ -524,11 +524,11 @@
       `;
       list.appendChild(row);
     });
-
+ 
     const subtotal = items.reduce((s, i) => s + i.price, 0);
     calcTotals(subtotal);
   }
-
+ 
   function calcTotals(subtotal, empty = false) {
     if (empty) {
       document.getElementById('subtotal').textContent = '—';
@@ -541,17 +541,17 @@
     const afterFee = subtotal + fee;
     const tax = afterFee * (taxRate / 100);
     const grand = afterFee + tax;
-
+ 
     document.getElementById('subtotal').textContent = fmt(subtotal);
     document.getElementById('feeAmount').textContent = fmt(fee);
     document.getElementById('taxAmount').textContent = fmt(tax);
     document.getElementById('grandTotal').textContent = fmt(grand);
   }
-
+ 
   function escHtml(str) {
     return str.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
   }
-
+ 
   // Tax rate change
   taxRateInput.addEventListener('input', () => {
     const v = parseFloat(taxRateInput.value);
@@ -560,7 +560,7 @@
     const subtotal = items.reduce((s, i) => s + i.price, 0);
     calcTotals(subtotal);
   });
-
+ 
   // Enter key on price
   priceInput.addEventListener('keydown', e => {
     if (e.key === 'Enter') {
@@ -568,7 +568,7 @@
       labelInput.focus();
     }
   });
-
+ 
   // Enter on label
   labelInput.addEventListener('keydown', e => {
     if (e.key === 'Enter') {
@@ -576,15 +576,15 @@
       addItem();
     }
   });
-
+ 
   // Scroll to bottom when new item added to list
   function scrollToBottom() {
     const wrap = document.querySelector('.receipt-wrap');
     wrap.scrollTop = wrap.scrollHeight;
   }
-
+ 
   const origAdd = addItem;
-
+ 
   // PWA Service Worker
   if ('serviceWorker' in navigator) {
     const sw = `
@@ -598,7 +598,7 @@
     const swUrl = URL.createObjectURL(blob);
     navigator.serviceWorker.register(swUrl);
   }
-
+ 
   render();
 </script>
 </body>
