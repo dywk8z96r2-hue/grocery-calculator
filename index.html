@@ -380,6 +380,7 @@
         placeholder="0.00"
         step="0.01"
         min="0"
+        enterkeyhint="done"
         autocomplete="off"
       >
     </div>
@@ -397,6 +398,7 @@
     autocomplete="off"
     autocorrect="off"
     autocapitalize="words"
+    enterkeyhint="done"
   >
 </div>
 
@@ -470,7 +472,8 @@
     items.push({ id: Date.now(), label, price });
     priceInput.value = '';
     labelInput.value = '';
-    priceInput.focus();
+    priceInput.blur();
+    labelInput.blur();
     save();
     render();
   }
@@ -501,7 +504,7 @@
     if (items.length === 0) {
       list.innerHTML = '';
       list.appendChild(empty);
-      calcTotals(0);
+      calcTotals(0, true);
       return;
     }
 
@@ -526,7 +529,14 @@
     calcTotals(subtotal);
   }
 
-  function calcTotals(subtotal) {
+  function calcTotals(subtotal, empty = false) {
+    if (empty) {
+      document.getElementById('subtotal').textContent = '—';
+      document.getElementById('feeAmount').textContent = '—';
+      document.getElementById('taxAmount').textContent = '—';
+      document.getElementById('grandTotal').textContent = '—';
+      return;
+    }
     const fee = subtotal * 0.10;
     const afterFee = subtotal + fee;
     const tax = afterFee * (taxRate / 100);
